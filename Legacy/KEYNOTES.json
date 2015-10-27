@@ -1,0 +1,46 @@
+{
+   "keynoteSession1" : {
+      "title" : "Anti-Trust Reform",
+	  "presenter" : "Susan Grier",
+	  "profession" : "Attorney",
+	  "sessionID": 1
+	  "Date": "October 23 2015",
+	  "Duration": 60, 
+
+   },
+   "keynoteSession2" : {
+      "title" : "Legal Knowledge Base Design",
+	  "presenter" : "David Raymond",
+	  "profession" : "law librarian",
+	  "sessionID": 2,
+	  "Date": "October 23 2015",
+	  "Duration": 30, 
+   },
+   "keynoteSession3" : {
+      "title" : "Patent Review Due Diligence",
+	  "presenter" : "Blair Tenny",
+	  "profession" : "clerk",
+	  "sessionID": 3,
+	  "Date": "October 23 2015",
+	  "Duration": 45,
+   },
+   "keynoteSession4" : {
+      "title" : "Lease Negotiation",
+	  "presenter" : "Mary Jo White",
+	  "profession" : "SEC Chair",
+	  "sessionID": 4,
+	  "Date": "October 23 2015",
+	  "Duration": 45,
+   },
+   "keynoteSession5" : {
+      "title" : "FASB Accounting Regulations",
+	  "presenter" : "Jamie Dixon",
+	  "profession" : "Bank CEO",
+	  "sessionID": 5,
+	  "Date": "October 23 2015",
+	  "Duration": 45,
+   }
+}
+
+
+

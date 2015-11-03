@@ -1,53 +1,26 @@
-var express     =   require("express");
-var app         =   express();
-var bodyParser  =   require("body-parser");
-var router      =   express.Router();
-var mongoOp     =   require("./models/mongo");
+var http = require('http')
+var port = process.env.PORT || 1337;
+http.createServer(function(req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Hello Basic HTTP Version - NU CONF 395\n');
+}).listen(port);
 
- app.use(bodyParser.json());
- app.use(bodyParser.urlencoded({"extended" : false}));
 
- router.get("/",function(req,res){
-     res.json({"error" : false,"message" : "Greetings from Law Circuit 2015"});
-});
 
- router.route("/keynotes")
-     .get(function(req,res){
-         var response = {};
-         mongoOp.find({},function(err,data){
-         // Mongo command to fetch all data from collection.
-             if(err) {
-                 response = {"error" : true,"message" : "Error fetching data"};
-             } else {
-                 response = {"error" : false,"message" : data};
-             }
-             res.json(response);
-         });
-          })
-         .post(function(req,res){
-         var db = new mongoOp();
-         var response = {};
-         // fetch keynote attribute
-         db.ktitle = req.body.ktitle; 
-         db.presenter = req.body.presenter; 
-         db.profession = req.body.profession; 
-         db.sessionID = req.body.sessionID; 
-         db.date = req.body.date; 
-         db.duration = req.body.duration; 
-         db.save(function(err){
-         // save() will run insert() command of MongoDB.
-         // it will add new data in collection.
-             if(err) {
-                 response = {"error" : true,"message" : "Error adding data"};
-             } else {
-                 response = {"error" : false,"message" : "Data added"};
-             }
-             res.json(response);
-         });
 
-     });
+//var express = require('express');
+//var app = express();
+//var fs = require("fs");
 
- app.use('/',router);
+//app.get('/listKeynotes', function (req, res) {
+//   fs.readFile( __dirname + "/" + "keynotes.json", 'utf8', function (err, data) {
+//       console.log( data );
+ //      res.end( data );
+ //  });
+//})
 
- app.listen(3000);
- console.log("Listening to PORT 3000");
+// app.listen(3000);
+// console.log("Listening to PORT 3000");
+
+
+//keynotes.json = restful db
